@@ -10,6 +10,10 @@
 
 ``` 
 npm install el-table-export --save
+
+or
+
+yarn add el-table-export
 ```
 
 ## 参数 Arguments
