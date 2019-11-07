@@ -1,6 +1,6 @@
 {
   "name": "el-table-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "配合Element-UI中的Table组件 导出text, json, csv, xls文件",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
