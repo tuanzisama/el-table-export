@@ -2,8 +2,10 @@
   "name": "el-table-export",
   "version": "1.0.1",
   "description": "配合Element-UI中的Table组件 导出text, json, csv, xls文件",
+  "main": "elTableExport.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
@@ -12,6 +14,8 @@
   "keywords": [
     "csv",
     "xls",
+    "json",
+    "txt",
     "element-ui",
     "table-export"
   ],

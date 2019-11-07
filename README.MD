@@ -1,14 +1,18 @@
-# elTableExport.js
-
+# el-table-export
 配合Element-UI中的Table组件 导出text, json, csv, xls文件
 
-## 依赖
+[![GitHub stars](https://img.shields.io/github/stars/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/stargazers)
+[![GitHub license](https://img.shields.io/github/license/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/blob/master/LICENSE)
+
+[![NPM](https://nodei.co/npm/el-table-export.png)](https://nodei.co/npm/el-table-export/)
+
+## 安装 Installation
 
 ``` 
-export-from-json (^1.1.4)
+npm install el-table-export --save
 ```
 
-## 参数
+## 参数 Arguments
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
@@ -16,7 +20,7 @@ export-from-json (^1.1.4)
 | type | 输出格式 | String |  text / json / csv / xls / |  csv | 
 | withBOM | 将BOM头元添加到CSV文件 | Boolean |  — |  false | 
 
-## DEMO
+## 例子 DEMO
 
 ~~说什么不如上一个demo~~
 [demo文件](./demo.vue)
@@ -37,7 +41,7 @@ let eteInstance = new elTableExport(this.$refs.elTable, {
 eteInstance.export();
 ```
 
-## Tips
+## 提示 Tips
 
 * 根据依赖包中文档，注明了在Excel在读取UTF8 CSV文件时需要BOM头。
 * table组件的Vue实例不是 `document.querySelector` 等获取的DOM实例，是 `ref` 指定的Vue实例。
