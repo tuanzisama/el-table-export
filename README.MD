@@ -27,6 +27,7 @@ yarn add el-table-export
 | fileName | 文件名 | String |  — |  export | 
 | type | 输出格式 | String |  text / json / csv / xls / |  csv | 
 | withBOM | 将BOM头元添加到CSV文件 | Boolean |  — |  false | 
+| useFormatter | 输出数据时是否使用table中定义的formatter | Boolean |  — |  true | 
 
 ### 例子 DEMO
 
