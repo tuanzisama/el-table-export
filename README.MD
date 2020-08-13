@@ -6,17 +6,21 @@
 
 [![NPM](https://nodei.co/npm/el-table-export.png)](https://nodei.co/npm/el-table-export/)
 
-## 安装 Installation
+![DEMO](https://i.loli.net/2019/11/08/CLRWBN8Q4XJfcqm.gif)
+
+### 安装 Installation
 
 ``` 
 npm install el-table-export --save
+```
 
 or
 
+``` 
 yarn add el-table-export
 ```
 
-## 参数 Arguments
+### 参数 Arguments
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ------ | ------ | ------ | ------ | ------ |
@@ -25,14 +29,14 @@ yarn add el-table-export
 | withBOM | 将BOM头元添加到CSV文件 | Boolean |  — |  false | 
 | useFormatter | 输出数据时是否使用table中定义的formatter | Boolean |  — |  true | 
 
-## 例子 DEMO
+### 例子 DEMO
 
 ~~说什么不如上一个demo~~
 [demo文件](./demo.vue)
 
 ``` 
 // 引用
-import { elTableExport } from "elTableExport.js";
+import { elTableExport } from "el-table-export";
 
 /* ⚠ 创建实例时需传入一个 table组件的Vue实例（必选）
  * 支持传入一个全局配置对象（非必选）
@@ -46,7 +50,7 @@ let eteInstance = new elTableExport(this.$refs.elTable, {
 eteInstance.export();
 ```
 
-## 提示 Tips
+### 提示 Tips
 
 * 根据依赖包中文档，注明了在Excel在读取UTF8 CSV文件时需要BOM头。
 * table组件的Vue实例不是 `document.querySelector` 等获取的DOM实例，是 `ref` 指定的Vue实例。
