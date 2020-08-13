@@ -9,7 +9,7 @@
             </el-table-column>
             <el-table-column prop="name" label="姓名" width="180">
             </el-table-column>
-            <el-table-column prop="address" label="地址">
+            <el-table-column prop="address" label="地址"  :formatter="addrFormat" >
             </el-table-column>
         </el-table>
     </div>
@@ -55,10 +55,14 @@ export default {
              */
             let exportTable = new elTableExport(this.$refs.elTable, {
                 fileName: "export-demo",
-                type: this.exportType
+                type: this.exportType,
+                useFormatter: true,
             });
             exportTable.export();
-        }
+        },
+        addrFormat(row, column) {
+            return 'ADD:' + row.address;
+        },
     }
 };
 </script>

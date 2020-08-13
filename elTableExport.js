@@ -2,10 +2,10 @@
  * @name elTableExport.js
  * @description 配合Element-UI中的Table组件 导出text, json, csv, xls文件
  * @author Evenwan
- * 
+ *
  * powered by exportFromJSON(^1.1.4)
  * https://www.npmjs.com/package/export-from-json
- *  
+ *
  */
 import exportFromJSON from "export-from-json";
 export class elTableExport {
@@ -13,6 +13,7 @@ export class elTableExport {
         fileName: 'export',
         type: 'csv',
         withBOM: false,
+        useFormatter: false,
     }) {
         if (Object.prototype.toString.call(elTableRef) !== '[object Object]' || elTableRef.$vnode.tag.includes('ElTable') === false) {
             throw "请传入一个Element-UI中Table组件的Vue实例"
@@ -21,18 +22,15 @@ export class elTableExport {
         this.defOpts = opts;
     }
     dataHandler() {
-        let columns = this.elTableRef.columns.map((element) => {
-            let cloumnObj = new Object();
-            cloumnObj.prop = element.property;
-            cloumnObj.label = element.label;
-            return cloumnObj
-        });
         let data = this.elTableRef.data;
         let outputData = new Array();
         data.map((value) => {
             let obj = new Object();
-            columns.forEach(element => {
-                obj[element.label] = value[element.prop]
+            this.elTableRef.columns.forEach(element => {
+                let val = value[element.property];
+                if(val && element.formatter && this.defOpts && this.defOpts.useFormatter)
+                    val = element.formatter(value, element);
+                obj[element.label] = val
             });
             outputData.push(obj);
         })
@@ -41,7 +39,7 @@ export class elTableExport {
 
     /**
      * 导出text, json, csv, xls文件
-     * @param {Object} opts 
+     * @param {Object} opts
      * @param {String} opts.fileName 文件名
      * @param {String} opts.type 输出格式 默认为csv文件
      * @param {String} opts.withBOM 将BOM（字节顺序标记）元添加到CSV文件。 Excel在读取UTF8 CSV文件时需要BOM。默认为false。

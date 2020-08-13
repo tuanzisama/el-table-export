@@ -1,7 +1,7 @@
 {
-  "name": "el-table-export",
+  "name": "el-table-export-with-formatter",
   "version": "1.0.3",
-  "description": "配合Element-UI中的Table组件 导出text, json, csv, xls文件",
+  "description": "el-table-export的enhancement，增加formatter支持",
   "main": "elTableExport.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuanzisama/elTableExport.git"
+    "url": "git+https://github.com/tomli/elTableExport.git"
   },
   "keywords": [
     "csv",
@@ -17,14 +17,15 @@
     "json",
     "txt",
     "element-ui",
-    "table-export"
+    "table-export",
+    "column-formatter"
   ],
-  "author": "tuanzisama",
+  "author": "tomli",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tuanzisama/elTableExport/issues"
+    "url": "https://github.com/tomli/elTableExport/issues"
   },
-  "homepage": "https://github.com/tuanzisama/elTableExport#readme",
+  "homepage": "https://github.com/tomli/elTableExport#readme",
   "dependencies": {
     "export-from-json": "^1.1.4"
   }
