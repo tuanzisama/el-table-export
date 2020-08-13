@@ -1,12 +1,6 @@
 # el-table-export-with-formatter
 [el-table-export](https://github.com/tuanzisama/elTableExport/stargazers)的enhancement，增加formatter支持
 
-[![GitHub stars](https://img.shields.io/github/stars/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/stargazers)
-[![GitHub license](https://img.shields.io/github/license/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/blob/master/LICENSE)
-
-[![NPM](https://nodei.co/npm/el-table-export.png)](https://nodei.co/npm/el-table-export/)
-
-![DEMO](https://i.loli.net/2019/11/08/CLRWBN8Q4XJfcqm.gif)
 
 ### 安装 Installation
 
@@ -18,7 +12,8 @@ npm install el-table-export-with-formatter --save
 ### 新增参数 Arguments
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
-| useFormatter | 输出数据时是否使用table中定义的formatter | Boolean |  — |  false | 
+| ------ | ------ | ------ | ------ | ------ |
+| useFormatter | 输出数据时是否使用table中定义的formatter | Boolean |  — |  true | 
 
 ### 例子 DEMO
 

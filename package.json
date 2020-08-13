@@ -1,6 +1,6 @@
 {
   "name": "el-table-export-with-formatter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "el-table-export的enhancement，增加formatter支持",
   "main": "elTableExport.js",
   "scripts": {

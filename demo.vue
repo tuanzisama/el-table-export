@@ -56,7 +56,7 @@ export default {
             let exportTable = new elTableExport(this.$refs.elTable, {
                 fileName: "export-demo",
                 type: this.exportType,
-                useFormatter: true,
+                useFormatter: true
             });
             exportTable.export();
         },

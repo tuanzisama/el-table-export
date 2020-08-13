@@ -13,7 +13,7 @@ export class elTableExport {
         fileName: 'export',
         type: 'csv',
         withBOM: false,
-        useFormatter: false,
+        useFormatter: true,
     }) {
         if (Object.prototype.toString.call(elTableRef) !== '[object Object]' || elTableRef.$vnode.tag.includes('ElTable') === false) {
             throw "请传入一个Element-UI中Table组件的Vue实例"
