@@ -47,7 +47,11 @@ let eteInstance = new elTableExport(this.$refs.elTable, {
     withBOM: false,
 });
 // 创建实例后使用 export() 方法执行导出功能
-eteInstance.export();
+eteInstance.export().then((result) => {
+    console.info('ok');
+}).catch((err) => {
+    console.info(err);
+});
 ```
 
 ### 提示 Tips

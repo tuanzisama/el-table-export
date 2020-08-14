@@ -58,7 +58,11 @@ export default {
                 type: this.exportType,
                 useFormatter: true
             });
-            exportTable.export();
+            exportTable.export().then((result) => {
+                console.info('ok');
+            }).catch((err) => {
+                console.info(err);
+            });
         },
         addrFormat(row, column) {
             return 'ADD:' + row.address;
