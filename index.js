@@ -15,6 +15,7 @@ export class elTableExport {
         type: 'csv',
         withBOM: false,
         useFormatter: true,
+        delimiter: ',',
     }) {
         if (Object.prototype.toString.call(elTableRef) !== '[object Object]' || elTableRef.$vnode.tag.includes('ElTable') === false) {
             throw "请传入一个Element-UI中Table组件的Vue实例"
@@ -56,7 +57,8 @@ export class elTableExport {
                     data: data,
                     fileName: hasProperty(opts, 'fileName', this.defOpts.fileName),
                     exportType: hasProperty(opts, 'type', this.defOpts.type),
-                    withBOM: hasProperty(opts, 'withBOM', this.defOpts.withBOM)
+                    withBOM: hasProperty(opts, 'withBOM', this.defOpts.withBOM),
+                    delimiter: hasProperty(opts, 'delimiter', this.defOpts.delimiter)
                 });
                 resolve()
             } catch (error) {
