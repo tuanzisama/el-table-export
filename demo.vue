@@ -53,11 +53,34 @@ export default {
              * @params: {Object} elTableRef element-ui的Table组件的Vue实例
              * @params: {Object} defOpts 传入的默认参数
              */
+            //从后端接口获取所有的数据，不分页
+            const allData = [
+                {
+                    date: "2016-05-02",
+                    name: "王小虎",
+                    address: "上海市普陀区金沙江路 1518 弄"
+                },
+                {
+                    date: "2016-05-04",
+                    name: "王小虎",
+                    address: "上海市普陀区金沙江路 1517 弄"
+                },
+                {
+                    date: "2016-05-01",
+                    name: "王小虎",
+                    address: "上海市普陀区金沙江路 1519 弄"
+                },
+                {
+                    date: "2016-05-03",
+                    name: "王小虎",
+                    address: "上海市普陀区金沙江路 1516 弄"
+                }
+            ]
             let exportTable = new elTableExport(this.$refs.elTable, {
                 fileName: "export-demo",
                 type: this.exportType,
                 useFormatter: true
-            });
+            },allData);
             exportTable.export().then((result) => {
                 console.info('ok');
             }).catch((err) => {

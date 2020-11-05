@@ -16,25 +16,43 @@ export class elTableExport {
         withBOM: false,
         useFormatter: true,
         delimiter: ',',
-    }) {
+    },data) {
         if (Object.prototype.toString.call(elTableRef) !== '[object Object]' || elTableRef.$vnode.tag.includes('ElTable') === false) {
             throw "请传入一个Element-UI中Table组件的Vue实例"
         }
         this.elTableRef = elTableRef;
         this.defOpts = opts;
+        this.data=data;
     }
     dataHandler() {
-        let data = this.elTableRef.data;
-        return data.reduce((pre, cur) => {
-            let obj = new Object();
-            this.elTableRef.columns.forEach(element => {
-                let val = cur[element.property];
-                if (val && element.formatter && this.defOpts && this.defOpts.useFormatter)
-                    val = element.formatter(cur, element);
-                obj[element.label] = val
-            });
-            return pre.concat(obj);
-        }, [])
+        let data;
+        if(this.data){
+            const data = this.data;
+            return data.map(item=>{
+                const obj={}
+                this.elTableRef.columns.forEach(element=>{
+                    console.log(element);
+                    if(item[element.property]){
+                        obj[element.label]=item[element.property];
+                    }
+                    
+                })
+                return obj;
+            })
+        }else{
+            data = this.elTableRef.data;
+            return data.reduce((pre, cur) => {
+                let obj = new Object();
+                this.elTableRef.columns.forEach(element => {
+                    let val = cur[element.property];
+                    if (val && element.formatter && this.defOpts && this.defOpts.useFormatter)
+                        val = element.formatter(cur, element);
+                    obj[element.label] = val
+                });
+                return pre.concat(obj);
+            }, [])
+        }
+        
     }
 
     /**
