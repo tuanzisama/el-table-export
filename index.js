@@ -10,6 +10,11 @@
 /* eslint-disable */
 import exportFromJSON from "export-from-json";
 export class elTableExport {
+    /**
+     * @param {Object} elTableRef 在el-table的ref
+     * @param {Object} opts 配置项
+     * @param {Array} data 所有表格数据
+     */
     constructor(elTableRef = null, opts = {
         fileName: 'export',
         type: 'csv',
