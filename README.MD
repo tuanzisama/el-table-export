@@ -29,7 +29,7 @@ yarn add el-table-export-lwp
 
 ``` 
 // 引用
-import { elTableExport } from "el-table-export";
+import { elTableExport } from "el-table-export-lwp";
 
 /* ⚠ 创建实例时需传入一个 table组件的Vue实例（必选）
  * 支持传入一个全局配置对象（非必选）
