@@ -36,7 +36,6 @@ export class elTableExport {
             return data.map(item=>{
                 const obj={}
                 this.elTableRef.columns.forEach(element=>{
-                    console.log(element);
                     if(item[element.property]){
                         obj[element.label]=item[element.property];
                     }
