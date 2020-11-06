@@ -1,13 +1,6 @@
 # el-table-export
 配合Element-UI中的Table组件 导出text, json, csv, xls文件
 
-[![GitHub stars](https://img.shields.io/github/stars/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/stargazers)
-[![GitHub license](https://img.shields.io/github/license/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/blob/master/LICENSE)
-
-[![NPM](https://nodei.co/npm/el-table-export.png)](https://nodei.co/npm/el-table-export/)
-
-![DEMO](https://i.loli.net/2019/11/08/CLRWBN8Q4XJfcqm.gif)
-
 ### 安装 Installation
 
 ``` 
