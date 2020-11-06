@@ -1,5 +1,5 @@
 {
-  "name": "el-table-export",
+  "name": "@lwp/el-table-export",
   "version": "1.0.7",
   "description": "配合Element-UI中的Table组件 导出text, json, csv, xls文件",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuanzisama/elTableExport.git"
+    "url": "git+https://github.com/lanweipeng/elTableExport.git"
   },
   "keywords": [
     "csv",
@@ -19,7 +19,7 @@
     "element-ui",
     "table-export"
   ],
-  "author": "tuanzisama",
+  "author": "lanweipeng",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tuanzisama/elTableExport/issues"

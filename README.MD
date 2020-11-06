@@ -32,7 +32,7 @@ yarn add el-table-export
 ### 例子 DEMO
 
 ~~说什么不如上一个demo~~
-[demo文件](./demo.vue)
+[demo文件](demo.vue)
 
 ``` 
 // 引用
@@ -41,11 +41,15 @@ import { elTableExport } from "el-table-export";
 /* ⚠ 创建实例时需传入一个 table组件的Vue实例（必选）
  * 支持传入一个全局配置对象（非必选）
  */
-let eteInstance = new elTableExport(this.$refs.elTable, {
+let eteInstance = new elTableExport(
+    this.$refs.elTable, //必填
+    {
     fileName: "export-demo",
     type: "csv",
     withBOM: false,
-},allData);
+    },, //必填
+    allData, //选填
+);
 // 创建实例后使用 export() 方法执行导出功能
 eteInstance.export().then((result) => {
     console.info('ok');
@@ -58,4 +62,4 @@ eteInstance.export().then((result) => {
 
 * 根据依赖包中文档，注明了在Excel在读取UTF8 CSV文件时需要BOM头。
 * table组件的Vue实例不是 `document.querySelector` 等获取的DOM实例，是 `ref` 指定的Vue实例。
-* 如需分页,请给allData
+* 如需分页,请给allData，不给表示只显示当前页
