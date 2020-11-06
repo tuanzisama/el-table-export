@@ -1,14 +1,14 @@
 # el-table-export
-配合Element-UI中的Table组件 导出text, json, csv, xls文件
+Cooperate with Table component in Element-UI and export text, json, csv, xls files.
+
+[简体中文 文档](./README.ZH_CN.MD)
 
 [![GitHub stars](https://img.shields.io/github/stars/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/stargazers)
 [![GitHub license](https://img.shields.io/github/license/tuanzisama/elTableExport)](https://github.com/tuanzisama/elTableExport/blob/master/LICENSE)
 
 [![NPM](https://nodei.co/npm/el-table-export.png)](https://nodei.co/npm/el-table-export/)
 
-![DEMO](https://i.loli.net/2019/11/08/CLRWBN8Q4XJfcqm.gif)
-
-### 安装 Installation
+### Installation
 
 ``` 
 npm install el-table-export --save
@@ -20,42 +20,34 @@ or
 yarn add el-table-export
 ```
 
-### 参数 Arguments
+### Arguments
 
-| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| Name | Desc | Type | Optional | Default |
 | ------ | ------ | ------ | ------ | ------ |
-| fileName | 文件名 | String |  — |  export | 
-| type | 输出格式 | String |  text / json / csv / xls / |  csv | 
-| withBOM | 将BOM头元添加到CSV文件 | Boolean |  — |  false | 
-| useFormatter | 输出数据时是否使用table中定义的formatter | Boolean |  — |  true | 
+| fileName | File Name | String | — |  export | 
+| type | Export Type | String |  text / json / csv / xls | csv | 
+| withBOM | Add BOM(byte order mark) meta to CSV file. BOM is expected by Excel when reading UTF8 CSV file. | Boolean | — | false | 
+| useFormatter | Whether to use the [formatter](https://element.eleme.cn/#/zh-CN/component/table#table-column-attributes) attribute provided by Element-UI. | Boolean | — | true | 
+| delimiter | Available when the export format is CSV file. [Source](https://github.com/zheeeng/export-from-json/blob/master/src/exportFromJSON.ts#L26)| String | — | , | 
 
-### 例子 DEMO
+### DEMO
 
-~~说什么不如上一个demo~~
-[demo文件](./demo.vue)
+
+[Demo File](./demo.vue)
 
 ``` 
-// 引用
 import { elTableExport } from "el-table-export";
 
-/* ⚠ 创建实例时需传入一个 table组件的Vue实例（必选）
- * 支持传入一个全局配置对象（非必选）
- */
 let eteInstance = new elTableExport(this.$refs.elTable, {
     fileName: "export-demo",
     type: "csv",
     withBOM: false,
 });
-// 创建实例后使用 export() 方法执行导出功能
+
+// invoke export
 eteInstance.export().then((result) => {
-    console.info('ok');
+    console.info("successfully");
 }).catch((err) => {
-    console.info(err);
+    console.info("Error: " , err);
 });
 ```
-
-### 提示 Tips
-
-* 根据依赖包中文档，注明了在Excel在读取UTF8 CSV文件时需要BOM头。
-* table组件的Vue实例不是 `document.querySelector` 等获取的DOM实例，是 `ref` 指定的Vue实例。
-
