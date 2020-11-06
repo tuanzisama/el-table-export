@@ -11,13 +11,13 @@
 ### 安装 Installation
 
 ``` 
-npm install el-table-export --save
+npm install el-table-export-lwp --save
 ```
 
 or
 
 ``` 
-yarn add el-table-export
+yarn add el-table-export-lwp
 ```
 
 ### 参数 Arguments
