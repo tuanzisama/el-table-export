@@ -1,12 +1,18 @@
 {
   "name": "el-table-export",
   "version": "1.0.7",
-  "description": "配合Element-UI中的Table组件 导出text, json, csv, xls文件",
-  "main": "index.js",
+  "description": "Make the Table component in Element-UI support exporting text, json, csv, xls files",
+  "main": "src/index.js",
+  "typings": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm version patch && npm publish"
   },
+  "files": [
+    "src",
+    "dist",
+    "example"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tuanzisama/elTableExport.git"
@@ -27,5 +33,9 @@
   "homepage": "https://github.com/tuanzisama/elTableExport#readme",
   "dependencies": {
     "export-from-json": "^1.1.4"
+  },
+  "devDependencies": {
+    "element-ui": "^2.14.1",
+    "typescript": "^4.1.2"
   }
 }
