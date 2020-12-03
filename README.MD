@@ -33,7 +33,7 @@ yarn add el-table-export
 ### DEMO
 
 
-[Demo File](./demo.vue)
+[Demo File](./example/demo.vue)
 
 ``` 
 import elTableExport from "el-table-export";

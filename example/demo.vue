@@ -15,6 +15,11 @@
     </div>
 </template>
 <script>
+/**
+ * How to start this file?
+ * vue serve ./example/demo.vue
+ * See: https://cli.vuejs.org/guide/prototyping.html
+ */
 import Vue from "vue";
 import { Table, TableColumn, Button, Radio, RadioGroup } from "element-ui";
 Vue.component(Table.name, Table);

@@ -33,7 +33,7 @@ yarn add el-table-export
 ### 例子 DEMO
 
 ~~说什么不如上一个demo~~
-[demo文件](./demo.vue)
+[demo文件](./example/demo.vue)
 
 ``` 
 // 引用
