@@ -1,5 +1,5 @@
 # el-table-export
-配合Element-UI中的Table组件 导出text, json, csv, xls文件。
+使Element-UI中的Table组件 导出text, json, csv, xls文件。
 
 [English Docs](README.MD)
 
@@ -37,18 +37,16 @@ yarn add el-table-export
 
 ``` 
 // 引用
-import { elTableExport } from "el-table-export";
+import elTableExport from "el-table-export";
 
 /* ⚠ 创建实例时需传入一个 table组件的Vue实例（必选）
  * 支持传入一个全局配置对象（非必选）
  */
-let eteInstance = new elTableExport(this.$refs.elTable, {
+elTableExport(this.$refs.elTable, {
     fileName: "export-demo",
     type: "csv",
     withBOM: false,
-});
-// 创建实例后使用 export() 方法执行导出功能
-eteInstance.export().then((result) => {
+}).then((result) => {
     console.info('ok');
 }).catch((err) => {
     console.info(err);

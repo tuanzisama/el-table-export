@@ -1,5 +1,5 @@
 # el-table-export
-Cooperate with Table component in Element-UI and export text, json, csv, xls files.
+Make the Table component in Element-UI support exporting text, json, csv, xls files.
 
 [简体中文 文档](./README.ZH_CN.MD)
 
@@ -36,16 +36,13 @@ yarn add el-table-export
 [Demo File](./demo.vue)
 
 ``` 
-import { elTableExport } from "el-table-export";
+import elTableExport from "el-table-export";
 
-let eteInstance = new elTableExport(this.$refs.elTable, {
+elTableExport(this.$refs.elTable, {
     fileName: "export-demo",
     type: "csv",
     withBOM: false,
-});
-
-// invoke export
-eteInstance.export().then((result) => {
+}).then((result) => {
     console.info("successfully");
 }).catch((err) => {
     console.info("Error: " , err);
