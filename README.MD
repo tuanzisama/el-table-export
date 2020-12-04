@@ -32,6 +32,7 @@ yarn add el-table-export
 
 ### DEMO
 
+[Live demo on CodePen](https://codepen.io/Evenwan/pen/jOMWYqW)
 
 [Demo File](./example/demo.vue)
 
